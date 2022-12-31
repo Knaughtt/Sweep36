@@ -34,10 +34,10 @@
                 
                 symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |       |  !  |  @  |  #  |  $  |  %  |                                  |  (  |  {  |  }  |  )  |  \  |      |
-// |       |  ^  |  &  |  *  |  -  |  =  |                                  |  _  |  [  |  ]  |  /  |  '  |      |
-// |       |  `  |     |     |     |     |                                  |     |     |  ,  |  .  |  ?  |      |
-//                | L0 | Space | Shift |                                       | ENT | Backspace | Tab |
+// |       |  !  |  @  |  #  |  $  |  %  |                                      |  (  |  {  |  }  |  )  |  \  |      |
+// |       |  ^  |  &  |  *  |  -  |  =  |                                      |  _  |  [  |  ]  |  /  |  '  |      |
+// |       |  `  |     |     |     |     |                                      |     |     |  ,  |  .  |  ?  |      |
+//                | L0 | Space | Shift |                                          | ENT | Backspace | Tab |
                         bindings = <
    &kp A  &kp EXCL  &kp AT   &kp HASH        &kp DLLR  &kp PRCNT                &kp LPAR  &kp LBRC &kp RBRC  &kp RPAR  &kp BSLH  &kp A
    &kp A  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp MINUS &kp EQUAL                &kp UNDER &kp LBKT &kp RBKT  &kp SLASH &kp SQT   &kp A
@@ -48,24 +48,24 @@
 
                 numpad_layer {
 // -----------------------------------------------------------------------------------------
-// |      |numlck|     |     |     |BT Clear|                  |  /  |  #7 |  #8 |  #9 |  *  |      |
-// |      | BT1  | BT2 | BT3 | BT4 | BT5    |                  |  -  |  #4 |  #5 |  #6 |  +  |      |
-// |      |      |     |     |     |        |                  |  ,  |  #1 |  #2 |  #3 |  .  |      |
-//                    | L0 | Space | = |                     | ENT |Backspace| #0 |
+// |      |numlck|     |     |     |BT Clear|                                   |  /  |  #7 |  #8 |  #9 |  *  |      |
+// |      | BT1  | BT2 | BT3 | BT4 | BT5    |                                   |  -  |  #4 |  #5 |  #6 |  +  |      |
+// |      |      |     |     |     |        |                                   |  ,  |  #1 |  #2 |  #3 |  .  |      |
+//                    | L0 | Space | = |                                         | ENT |Backspace| #0 |
                         bindings = <
-   &none &kp KP_NUM   &none        &none        &none        &bt BT_CLR      &kp KP_SLASH &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &none
-   &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &none
-   &none &none        &none        &none        &none        &none           &kp KP_COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT &none
-                    	     &to 0 &kp SPACE &kp KP_EQUAL                       &kp RET   &kp BSPC    &kp KP_N0
+   &none &kp KP_NUM   &none        &none        &none        &bt BT_CLR          &kp KP_SLASH &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MULTIPLY &none
+   &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &kp KP_MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &none
+   &none &none        &none        &none        &none        &none               &kp KP_COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT &none
+                    	     &to 0 &kp SPACE &kp KP_EQUAL                          &kp RET   &kp BSPC    &kp KP_N0
                         >;
                 };
                 
                 mouse_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |              |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |              |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |              |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |              | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -76,15 +76,15 @@
                 
                 gaming_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |      | Tab  |  Q  |  2  |  E  |  R  |               |     |      |     |     |     |      |
+// |      | SHFT |  A  |  W  |  D  |  F  |               |     | LEFT | UP  |RIGHT|     |      |
+// |      | CTRL |  Z  |  S  |  C  |  V  |               |     |      |Down |     |     |      |
+//                     | ESC | SPC |  M  |               | L0  |      |     |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &none &kp TAB   &kp Q &kp 2 &kp E &kp R                &none &none    &none    &none     &none &none
+   &none &kp LSHFT &kp A &kp W &kp D &kp F                &none &kp LEFT &kp UP   &kp RIGHT &none &none
+   &none &kp LCTRL &kp Z &kp S &kp C &kp V                &none &none    &kp DOWN &none     &none &none
+                   &kp ESC &kp SPACE &kp M                &to 0 &none    &none
                         >;
                 };
         };
