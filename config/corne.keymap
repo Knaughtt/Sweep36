@@ -21,15 +21,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |       |   Q   |   W   |   F   |  P   |   B  |                                      |   J   |  L   |   U  |  Y  |  ;  |      |
-// |       |   A   |   R   |   S   |  T   |   G  |                                      |   M   |  N   |   E  |  I  |  O  |      |
-// |       |   Z   | X*ALT | C*CTRL|D*SHFT|   V  |                                      |   K   |H*SHFT|,*CTRL|.*ALT|  /  |      |
-//                                 |ESC*L2|SPC*L1| TAB |                          | ENT |BSPC*L3|DEL*L5|
+// |       |   Q   |   W   |   F   |  P   |  B  |                                      |  J  |  L   |   U  |  Y  |  ;  |      |
+// |       |   A   |   R   |   S   |  T   |  G  |                                      |  M  |  N   |   E  |  I  |  O  |      |
+// |       |   Z   | X*ALT | C*CTRL|D*SHFT|  V  |                                      |  K  |H*SHFT|,*CTRL|.*ALT|  /  |      |
+//                                 |ESC*L2| SPC |TAB*L1|                        |ENT*L3| BSPC|DEL*L5|
                         bindings = <
    &none   &kp Q   &kp W      &kp F       &kp P       &kp B                            &kp J      &kp L       &kp U           &kp Y        &kp SEMI &none
    &none   &kp A   &kp R      &kp S       &kp T       &kp G                            &kp M      &kp N       &kp E           &kp I        &kp O    &none
    &none   &kp Z   &mt LALT X &mt LCTRL C &mt LSHFT D &kp V                            &kp K      &mt LSHFT H &mt LCTRL COMMA &mt LALT DOT &kp FSLH &none
-                                          &lt 2 ESC   &lt 1 SPACE &kp TAB      &kp RET &lt 3 BSPC &lt 5 DEL
+                                          &lt 2 ESC   &kp SPACE &lt 1 TAB    &lt 3 RET &kp BSPC &lt 5 DEL
                         >;
                 };
                 
@@ -38,12 +38,12 @@
 // |       |  !  |  @  |  #  |  $  |  %  |                                           |  (  |  {  |  }  |  )  |  \  |      |
 // |       |  ^  |  &  |  *  |  -  |  =  |                                           |  _  |  [  |  ]  |  /  |  '  |      |
 // |       |  `  | ALT | CTRL| SHFT|     |                                           |     |     |  ,  |  .  |  ?  |      |
-//                           | ESC |TRANS| TAB |                               | ENT |BSPC | DEL |
+//                           | ESC |SPACE|TRANS|                               | ENT |BSPC | DEL |
                         bindings = <
    &none  &kp EXCL  &kp AT   &kp HASH        &kp DLLR  &kp PRCNT                     &kp LPAR  &kp LBRC &kp RBRC  &kp RPAR  &kp BSLH  &none
    &none  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp MINUS &kp EQUAL                     &kp UNDER &kp LBKT &kp RBKT  &kp SLASH &kp SQT   &none
    &none  &kp GRAVE &kp LALT &kp LCTRL       &kp LSHFT &none                         &none     &none    &kp COMMA &kp DOT   &kp QMARK &none
-                                             &kp ESC   &trans &kp TAB        &kp RET &kp BSPC &kp DEL
+                                             &kp ESC   &kp SPACE &trans        &kp RET &kp BSPC &kp DEL
                         >;
                 };
 
@@ -63,15 +63,15 @@
                 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  Z  |  X  |   C  |  V  |   Y  |                           |        |       |       |        |     |      |
-// |      |     | LEFT|  UP  |RIGHT|      |                           |ACCELUP |WHLLEFT| WHLUP |WHLRIGHT|     |      |
-// |      |     |     | DOWN |     |      |                           |ACCELDWN|       |WHLDOWN|        |     |      |
-//                    |MCLICK| CTRL|RCLICK|                           |   ENT  | TRANS |  DEL  |
+// |      |  Z  |  X  |   C  |  V   |  Y  |                           |        |       |       |        |     |      |
+// |      | SHFT| LEFT|  UP  |RIGHT |     |                           |ACCELUP |WHLLEFT| WHLUP |WHLRIGHT|     |      |
+// |      |     |     | DOWN |      |     |                           |ACCELDWN|       |WHLDOWN|        |     |      |
+//                           |MCLICK| CTRL|RCLICK|              |TRANS|  BSPC  |  DEL  |
                         bindings = <
-   &none &kp Z &kp X    &kp C    &kp V     &kp Y                              &none &none  &none     &none &none &none
-   &none &none &kp LEFT &kp UP   &kp RIGHT &none                              &none &none  &kp PG_UP &none &none &none
-   &none &none &none    &kp DOWN &none     &none                              &none &none  &kp PG_DN &none &none &none
-                                 &kp ESC   &kp LCTRL &kp TAB          &kp RET &trans &kp DEL
+   &none &kp Z     &kp X    &kp C    &kp V     &kp Y                              &none    &none  &none     &none &none &none
+   &none &kp LSHFT &kp LEFT &kp UP   &kp RIGHT &none                              &none    &none  &kp PG_UP &none &none &none
+   &none &none     &none    &kp DOWN &none     &none                              &none    &none  &kp PG_DN &none &none &none
+                                     &kp ESC   &kp LCTRL &kp TAB           &trans &kp BSPC &kp DEL
                         >;
                 };
                 
