@@ -56,7 +56,7 @@
                         bindings = <
    &none &kp KP_NUM &none     &none     &none      &none                                 &kp KP_SLASH &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &none
    &none &none      &none     &none     &none      &none                                 &kp KP_MINUS &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
-   &none &none      &kp LALT  &kp LCTRL &kp LSHFT  &to 4                                 &kp KP_COMMA &kp N1 &kp N2 &kp N3 &kp KP_DOT &none
+   &none &none      &kp LALT  &kp LCTRL &kp LSHFT  &to 4                                 &kp COMMA &kp N1 &kp N2 &kp N3 &kp DOT &none
                                         &trans     &kp SPACE  &kp KP_EQUAL       &kp RET &kp BSPC  &kp N0
                         >;
                 };
