@@ -24,12 +24,12 @@
 // |       |   Q   |   W   |   F   |  P   |  B  |                                      |  J  |  L   |   U  |  Y  |  ;  |      |
 // |       |   A   |   R   |   S   |  T   |  G  |                                      |  M  |  N   |   E  |  I  |  O  |      |
 // |       |   Z   | X*ALT | C*CTRL|D*SHFT|  V  |                                      |  K  |H*SHFT|,*CTRL|.*ALT|  /  |      |
-//                                 |ESC*L2| SPC |TAB*L1|                        |ENT*L3| BSPC|DEL*L5|
+//                                 |ESC*L1| SPC |TAB*L2|                        |ENT*L3| BSPC|DEL*L5|
                         bindings = <
    &none   &kp Q   &kp W      &kp F       &kp P       &kp B                            &kp J      &kp L       &kp U           &kp Y        &kp SEMI &none
    &none   &kp A   &kp R      &kp S       &kp T       &kp G                            &kp M      &kp N       &kp E           &kp I        &kp O    &none
    &none   &kp Z   &mt LALT X &mt LCTRL C &mt LSHFT D &kp V                            &kp K      &mt LSHFT H &mt LCTRL COMMA &mt LALT DOT &kp FSLH &none
-                                          &lt 2 ESC   &kp SPACE &lt 1 TAB    &lt 3 RET &kp BSPC &lt 5 DEL
+                                          &lt 1 ESC   &kp SPACE &lt 2 TAB    &lt 3 RET &kp BSPC &lt 5 DEL
                         >;
                 };
                 
@@ -77,15 +77,15 @@
                 
                 gaming_layer {
 // -----------------------------------------------------------------------------------------
-// |      | Tab  |  Q  |  2  |  E  |  R  |                          |     |      |     |     |     |      |
-// |      | SHFT |  A  |  W  |  D  |  F  |                          |     | LEFT | UP  |RIGHT|     |      |
+// |      | Tab  |  Q  |  2  |  E  |  R  |                          |  I  |      |     |     |     |      |
+// |      | SHFT |  A  |  W  |  D  |  F  |                          |  M  | LEFT | UP  |RIGHT|     |      |
 // |      | CTRL |  Z  |  S  |  C  |  V  |                          |     |      |Down |     |     |      |
-//                           | ESC | SPC |  M  |              | L0  |      |     |
+//                           | ESC | SPC | TAB |              | L0  |     |      |
                         bindings = <
-   &none &kp TAB   &kp Q &kp 2 &kp E   &kp R                          &none &none    &none    &none     &none &none
-   &none &kp LSHFT &kp A &kp W &kp D   &kp F                          &none &kp LEFT &kp UP   &kp RIGHT &none &none
+   &none &kp TAB   &kp Q &kp 2 &kp E   &kp R                          &kp I &none    &none    &none     &none &none
+   &none &kp LSHFT &kp A &kp W &kp D   &kp F                          &kp M &kp LEFT &kp UP   &kp RIGHT &none &none
    &none &kp LCTRL &kp Z &kp S &kp C   &kp V                          &none &none    &kp DOWN &none     &none &none
-                               &kp ESC &kp SPACE &kp M          &to 0 &none &none
+                               &kp ESC &kp SPACE &kp TAB          &to 0 &none &none
                         >;
                 };
                 
