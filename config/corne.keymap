@@ -38,12 +38,12 @@
 // |       |  !  |  @  |  #  |  $  |  %  |                                           |  (  |  {  |  }  |  )  |  \  |      |
 // |       |  ^  |  &  |  *  |  -  |  =  |                                           |  _  |  [  |  ]  |  /  |  '  |      |
 // |       |  `  | ALT | CTRL| SHFT|     |                                           |     |     |  ,  |  .  |  ?  |      |
-//                           | ESC |SPACE|TRANS|                               | ENT |BSPC | DEL |
+//                           |TRANS|SPACE| ESC |                               | ENT |BSPC | DEL |
                         bindings = <
    &none  &kp EXCL  &kp AT   &kp HASH        &kp DLLR  &kp PRCNT                     &kp LPAR  &kp LBRC &kp RBRC  &kp RPAR  &kp BSLH  &none
    &none  &kp CARET &kp AMPS &kp KP_MULTIPLY &kp MINUS &kp EQUAL                     &kp UNDER &kp LBKT &kp RBKT  &kp SLASH &kp SQT   &none
    &none  &kp GRAVE &kp LALT &kp LCTRL       &kp LSHFT &none                         &none     &none    &kp COMMA &kp DOT   &kp QMARK &none
-                                             &kp ESC   &kp SPACE &trans        &kp RET &kp BSPC &kp DEL
+                                             &trans    &kp SPACE &kp ESC     &kp RET &kp BSPC &kp DEL
                         >;
                 };
 
@@ -52,12 +52,12 @@
 // |      |numlck|     |     |     |     |                                              |  /  |  #7 |  #8 |  #9 |  *  |      |
 // |      |      |     |     |     |     |                                              |  -  |  #4 |  #5 |  #6 |  +  |      |
 // |      |      | ALT |CTRL |SHFT | L4  |                                              |  ,  |  #1 |  #2 |  #3 |  .  |      |
-//                           |TRANS|SPACE|  =  |                                  | ENT |BSPC |  #0 |
+//                           |  =  |SPACE|TRANS|                                  | ENT |BSPC |  #0 |
                         bindings = <
-   &none &kp KP_NUM &none     &none     &none      &none                                 &kp KP_SLASH &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &none
-   &none &none      &none     &none     &none      &none                                 &kp KP_MINUS &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
-   &none &none      &kp LALT  &kp LCTRL &kp LSHFT  &to 4                                 &kp COMMA &kp N1 &kp N2 &kp N3 &kp DOT &none
-                                        &trans     &kp SPACE  &kp KP_EQUAL       &kp RET &kp BSPC  &kp N0
+   &none &kp KP_NUM &none     &none     &none        &none                                 &kp KP_SLASH &kp N7 &kp N8 &kp N9 &kp KP_MULTIPLY &none
+   &none &none      &none     &none     &none        &none                                 &kp KP_MINUS &kp N4 &kp N5 &kp N6 &kp KP_PLUS &none
+   &none &none      &kp LALT  &kp LCTRL &kp LSHFT    &to 4                                 &kp COMMA &kp N1 &kp N2 &kp N3 &kp DOT &none
+                                        &kp KP_EQUAL &kp SPACE  &trans             &kp RET &kp BSPC  &kp N0
                         >;
                 };
                 
