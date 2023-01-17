@@ -15,6 +15,7 @@
 #define GAMING  4
 #define MEDIA   5
 
+// Q and A combo to hit ESC
 / {
     combos {
         compatible = "zmk,combos";
@@ -23,6 +24,17 @@
             key-positions = <1 13>;
             bindings = <&kp ESC>;
         };
+    };
+};
+
+// How long you have to press and release to use the key and not the modifier.
+&mt {
+    tapping-term-ms = <300>;
+};
+
+/ {
+    keymap {
+        ...
     };
 };
 
