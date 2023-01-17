@@ -16,6 +16,17 @@
 #define MEDIA   5
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <75>;
+            key-positions = <1 13>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
