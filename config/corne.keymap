@@ -29,7 +29,7 @@
 
 // How long you have to press and release to use the key and not the modifier.
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <400>;
 };
 
 / {
@@ -40,13 +40,13 @@
 // -----------------------------------------------------------------------------------------
 // |       |   Q   |   W   |   F   |  P   |  B  |                                      |  J  |  L   |   U  |  Y  |  ;  |      |
 // |       |   A   |   R   |   S   |  T   |  G  |                                      |  M  |  N   |   E  |  I  |  O  |      |
-// |       |   Z   | X*ALT | C*CTRL|D*SHFT|  V  |                                      |  K  |H*SHFT|,*CTRL|.*ALT|  /  |      |
+// |       | Z*CTRL| X*ALT | C*CTRL|D*SHFT|  V  |                                      |  K  |H*SHFT|,*CTRL|.*ALT|  /  |      |
 //                                 |ESC*L2| SPC |TAB*L1|                        |ENT*L3| BSPC|DEL*L5|
                         bindings = <
-   &none   &kp Q   &kp W      &kp F       &kp P       &kp B                            &kp J      &kp L       &kp U           &kp Y        &kp SEMI &none
-   &none   &kp A   &kp R      &kp S       &kp T       &kp G                            &kp M      &kp N       &kp E           &kp I        &kp O    &none
-   &none   &kp Z   &mt LALT X &mt LCTRL C &mt LSHFT D &kp V                            &kp K      &mt LSHFT H &mt LCTRL COMMA &mt LALT DOT &kp FSLH &none
-                                          &lt 2 ESC   &kp SPACE &lt 1 TAB    &lt 3 RET &kp BSPC &lt 5 DEL
+   &none   &kp Q       &kp W      &kp F       &kp P       &kp B                            &kp J      &kp L       &kp U           &kp Y        &kp SEMI &none
+   &none   &kp A       &kp R      &kp S       &kp T       &kp G                            &kp M      &kp N       &kp E           &kp I        &kp O    &none
+   &none   &mt LCTRL Z &mt LALT X &mt LCTRL C &mt LSHFT D &kp V                            &kp K      &mt LSHFT H &mt LCTRL COMMA &mt LALT DOT &kp FSLH &none
+                                              &lt 2 ESC   &kp SPACE &lt 1 TAB    &lt 3 RET &kp BSPC &lt 5 DEL
                         >;
                 };
                 
@@ -54,12 +54,12 @@
 // -----------------------------------------------------------------------------------------
 // |       |  !  |  @  |  #  |  $  |  %  |                                           | /?  |  {  |  }  |  \  |     |      |
 // |       |  ^  |  &  |  *  | ,<  | .>  |                                           | '"  |  (  |  )  |  _  |  =  |      |
-// |       |  `  | ALT | CTRL| SHFT|     |                                           |  -  |  [  |  ]  |     |     |      |
+// |       |  `  | ALT | CTRL| SHFT|     |                                           |  "  |  [  |  ]  |  -  |     |      |
 //                           | ESC |SPACE|TRANS|                               | ENT |BSPC | DEL |
                         bindings = <
    &none  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT                     &kp FSLH  &kp LBRC &kp RBRC &kp NUBS  &none     &none
    &none  &kp CARET &kp AMPS &kp STAR  &kp COMMA &kp DOT                       &kp APOS  &kp LPAR &kp RPAR &kp UNDER &kp EQUAL &none
-   &none  &kp GRAVE &kp LALT &kp LCTRL &kp LSHFT &none                         &kp MINUS &kp LBKT &kp RBKT &none     &none     &none
+   &none  &kp GRAVE &kp LALT &kp LCTRL &kp LSHFT &none                         &kp DQT   &kp LBKT &kp RBKT &kp MINUS &none     &none
                                        &kp ESC   &kp SPACE &trans      &kp RET &kp BSPC &kp DEL
                         >;
                 };
@@ -80,15 +80,15 @@
                 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |  UP  |      |  Y  |                           |        |       |       |        |     |      |
-// |      | SHFT| LEFT| DOWN |RIGHT |     |                           |ACCELUP |WHLLEFT| WHLUP |WHLRIGHT|     |      |
-// |      |     |     |      |      |     |                           |ACCELDWN|       |WHLDOWN|        |     |      |
-//                           |MCLICK| CTRL|RCLICK|              |TRANS|  BSPC  |  ENT  |
+// |      | CTRL|     |  UP  |     |  Y  |                           |     |     |  UP |     |     |     |
+// |      | SHFT| LEFT| DOWN |RIGHT|     |                           |     |LEFT |DOWN |RIGHT|     |     |
+// |      |  Z  |  X  |   C  |  Y  |  V  |                           |  V  |  Y  |  C  |  X  |  Z  |     |
+//                           | ESC |SPACE| CTRL|               |TRANS| BSPC| ENT |
                         bindings = <
-   &none &none     &none    &kp UP   &none     &kp Y                              &none    &none  &none     &none &none &none
-   &none &kp LSHFT &kp LEFT &kp DOWN &kp RIGHT &none                              &none    &none  &kp PG_UP &none &none &none
-   &none &none     &none    &none    &none     &none                              &none    &none  &kp PG_DN &none &none &none
-                                     &kp ESC   &kp LCTRL &kp TAB          &trans &kp BSPC &kp RET
+   &none &kp LCTRL &kp PG_UP &kp UP   &kp PG_DN &kp Y                              &kp Y    &kp PG_UP &kp UP   &kp PG_DN &kp LCTRL &none
+   &none &kp LSHFT &kp LEFT  &kp DOWN &kp RIGHT &none                              &none    &kp LEFT  &kp DOWN &kp RIGHT &kp LSHFT &none
+   &none &kp Z     &kp X     &kp C    &kp Y     &kp V                              &kp V    &kp Y     &kp C    &kp X     &kp Z     &none
+                                      &kp ESC   &kp SPACE &kp LCTRL          &trans &kp BSPC &kp RET
                         >;
                 };
                 
