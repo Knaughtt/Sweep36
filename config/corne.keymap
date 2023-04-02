@@ -29,11 +29,11 @@
 
 // How long you have to press and release to use the key and not the modifier.
 &mt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <100>;
 };
 
 &lt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <100>;
 };
 
 / {
@@ -49,7 +49,7 @@
                         bindings = <
    &none   &kp Q      &kp W      &kp F       &kp P       &kp B                     &kp J      &kp L       &kp U       &kp Y      &kp SEMI   &none
    &none   &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G                     &kp M      &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O &none
-   &none   &lt 3 Z    &kp X      &kp C       &kp D       &kp V                     &kp K      &kp H       &kp COMMA   &kp DOT    &kp FSLH   &none
+   &none   &lt 3 Z    &kp X      &kp C       &kp D       &kp V                     &kp K      &kp H       &kp COMMA   &kp DOT    &lt 3 FSLH   &none
                                              &lt 5 ESC   &kp SPACE &lt 1 TAB       &lt 2 RET &kp BSPC &lt 5 DEL
                         >;
                 };
