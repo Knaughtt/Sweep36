@@ -27,9 +27,6 @@
     };
 };
 
-
-};
-
 // How long you have to press and release to use the key and not the modifier.
 &mt {
     tapping-term-ms = <200>;
