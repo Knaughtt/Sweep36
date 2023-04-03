@@ -29,11 +29,11 @@
 
 // How long you have to press and release to use the key and not the modifier.
 &mt {
-    tapping-term-ms = <1000>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
-    tapping-term-ms = <1000>;
+    tapping-term-ms = <200>;
 };
 
 / {
