@@ -27,15 +27,7 @@
     };
 };
 
-gqt: global-quick-tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "GLOBAL_QUICK_TAP";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
+
 };
 
 // How long you have to press and release to use the key and not the modifier.
